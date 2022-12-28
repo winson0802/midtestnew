@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 10;
+    public float speed = 5;
     public Joystick joyStick;
     public Transform firePoint;
     public GameObject bulletPrefab;
@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
 
             // 使用 Lerp 漸漸轉向
             Quaternion targetRotation = Quaternion.Euler(0, faceAngle, 0);
-            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.1f);
+            transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, 0.03f);
         }
         else
         {
